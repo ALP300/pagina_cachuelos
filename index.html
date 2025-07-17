@@ -1,28 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leon | Template One</title>
-    <!-- Main Template CSS File -->
+    <title>Cachuelitos</title>
     <link rel="stylesheet" href="css/leon.css" />
-    <!-- Render All Elements Normally -->
     <link rel="stylesheet" href="css/normalize.css" />
-    <!-- Font Awesome Library -->
     <link rel="stylesheet" href="css/all.min.css" />
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      .header .logo {
+        content: url('images/iconoC.jpg');
+        width: 10%;
+      }
+      .intro-text h1 {
+        color: #ff6200;
+      }
+      :root {
+        --main-color: #ff6200;
+        --secondary-color: #003087;
+      }
+      .services .services-content .image::before {
+        background-color: #ff6200;
+      }
+      .about .about-content .image::after {
+        border-left-color: #ff6200;
+        border-bottom-color: #ff6200;
+      }
+    </style>
   </head>
   <body>
-    <!-- Start Header -->
+    <!-- Header -->
     <div class="header">
       <div class="container">
-        <img class="logo" src="images/logo.png" alt="" />
+        <img class="logo" src="images/iconoC.jpg" alt="Cachuelitos Logo" />
         <div class="links">
           <span class="icon">
             <span></span>
@@ -30,183 +43,173 @@
             <span></span>
           </span>
           <ul>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#portfolio">Portafolio</a></li>
+            <li><a href="#about">Sobre Nosotros</a></li>
+            <li><a href="#contact">Contacto</a></li>
           </ul>
         </div>
       </div>
     </div>
-    <!-- End Header -->
-    <!-- Start Landing Section -->
+
+    <!-- Landing -->
     <div class="landing">
       <div class="intro-text">
-        <h1>Hello There</h1>
-        <p>We are Leon - Super Creative & Minimal Agency Web Template</p>
+        <h1>Bienvenidos a Cachuelitos</h1>
+        <p>Conectamos personas con talento y quienes los necesitan. Fácil, rápido y seguro.</p>
       </div>
     </div>
-    <!-- End Landing Section -->
-    <!-- Start Features -->
+
+    <!-- Features -->
     <div class="features">
       <div class="container">
         <div class="feat">
-          <i class="fas fa-magic fa-3x"></i>
-          <h3>Tell Us Your Idea</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab</p>
+          <i class="fas fa-briefcase fa-3x"></i>
+          <h3>Encuentra Servicios</h3>
+          <p>Busca profesionales como electricistas, abogados, arquitectos y más en todo el país.</p>
         </div>
         <div class="feat">
-          <i class="far fa-gem fa-3x"></i>
-          <h3>We Will Do All The Work</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab</p>
+          <i class="fas fa-user-plus fa-3x"></i>
+          <h3>Registra tu Perfil</h3>
+          <p>Postula como trabajador subiendo tu perfil para ser contactado por nuevos clientes.</p>
         </div>
         <div class="feat">
-          <i class="fas fa-globe-asia fa-3x"></i>
-          <h3>Your Product is Worldwide</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut lab</p>
+          <i class="fas fa-handshake fa-3x"></i>
+          <h3>Conexiones Reales</h3>
+          <p>Facilitamos el contacto directo entre cliente y trabajador sin intermediarios.</p>
         </div>
       </div>
     </div>
-    <!-- End Features -->
-    <!-- Start Services -->
+
+    <!-- Services -->
     <div class="services" id="services">
       <div class="container">
-        <h2 class="special-heading">Services</h2>
-        <p>Don't be busy, be productive</p>
+        <h2 class="special-heading">Servicios</h2>
+        <p>Todo tipo de profesionales al alcance de un clic</p>
+
         <div class="services-content">
-          <div class="col">
-            <!-- Start Service -->
-            <div class="srv">
-              <i class="fas fa-palette fa-2x"></i>
-              <div class="text">
-                <h3>Graphic Design</h3>
-                <p>
-                  Graphic design is the process of visual communication and problem-solving using one or more of
-                  typography, photography and illustration.
-                </p>
-              </div>
+          <!-- Servicio -->
+          <div class="srv-box">
+            <i class="fas fa-tools fa-2x"></i>
+            <div class="text">
+              <h3>Servicios Técnicos</h3>
+              <p>Electricistas, gasfiteros, técnicos en refrigeración y otros expertos a domicilio.</p>
             </div>
-            <div class="srv">
-              <i class="fab fa-sketch fa-2x"></i>
-              <div class="text">
-                <h3>UI & UX</h3>
-                <p>
-                  Process of enhancing user satisfaction with a product by improving the usability, accessibility, and
-                  pleasure provided in the interaction.
-                </p>
-              </div>
-            </div>
-            <!-- End Service -->
           </div>
-          <div class="col">
-            <!-- Start Services -->
-            <div class="srv">
-              <i class="fas fa-vector-square fa-2x"></i>
-              <div class="text">
-                <h3>Web Design</h3>
-                <p>
-                  Web design encompasses many different skills and disciplines in the production and maintenance of
-                  websites.
-                </p>
-              </div>
+
+          <div class="srv-box">
+            <i class="fas fa-gavel fa-2x"></i>
+            <div class="text">
+              <h3>Asesoría Legal</h3>
+              <p>Abogados disponibles para consultas jurídicas personales o empresariales.</p>
             </div>
-            <div class="srv">
-              <i class="fas fa-pencil-ruler fa-2x"></i>
-              <div class="text">
-                <h3>Web Development</h3>
-                <p>
-                  Web development is a broad term for the work involved in developing a web site for the Internet or an
-                  intranet.
-                </p>
-              </div>
-            </div>
-            <!-- End Services -->
           </div>
-          <div class="col">
-            <div class="image image-column">
-              <img src="images/services.jpg" alt="" />
+
+          <div class="srv-box">
+            <i class="fas fa-drafting-compass fa-2x"></i>
+            <div class="text">
+              <h3>Diseño y Construcción</h3>
+              <p>Arquitectos, ingenieros y diseñadores listos para ayudarte con tu proyecto.</p>
             </div>
+          </div>
+
+          <div class="srv-box">
+            <i class="fas fa-user-graduate fa-2x"></i>
+            <div class="text">
+              <h3>Educación y Tutorías</h3>
+              <p>Profesores particulares para niños, jóvenes y adultos en diferentes áreas.</p>
+            </div>
+          </div>
+
+          <div class="srv-box">
+            <i class="fas fa-paint-brush fa-2x"></i>
+            <div class="text">
+              <h3>Diseño Creativo</h3>
+              <p>Soluciones de diseño gráfico y branding para empresas y emprendedores.</p>
+            </div>
+          </div>
+
+          <div class="srv-box">
+            <i class="fas fa-code fa-2x"></i>
+            <div class="text">
+              <h3>Desarrollo de Software</h3>
+              <p>Creación de aplicaciones y sitios web a medida para negocios digitales.</p>
+            </div>
+          </div>
+
+          <!-- Imagen decorativa -->
           </div>
         </div>
       </div>
     </div>
-    <!-- End Services -->
-    <!-- Start Portfolio -->
+
+
+    <!-- Portfolio -->
     <div class="portfolio" id="portfolio">
       <div class="container">
-        <h2 class="special-heading">Portfolio</h2>
-        <p>If you do it right, it will last forever.</p>
+        <h2 class="special-heading">Portafolio</h2>
+        <p>Historias de éxito de nuestros usuarios</p>
         <div class="portfolio-content">
           <div class="card">
-            <img src="images/portfolio-1.jpg" alt="" />
+            <img src="images/portfolio-1.jpg" alt="Proyecto 1" />
             <div class="info">
-              <h3>Project Here</h3>
-              <p>My creative ability is very difficult to measure because it can manifest in so many surprising and.</p>
+              <h3>Instalación Eléctrica</h3>
+              <p>Juan, técnico certificado, fue contratado para renovar todo un sistema eléctrico en Lima.</p>
             </div>
           </div>
           <div class="card">
-            <img src="images/portfolio-2.jpg" alt="" />
+            <img src="images/portfolio-2.jpg" alt="Proyecto 2" />
             <div class="info">
-              <h3>Project Here</h3>
-              <p>My creative ability is very difficult to measure because it can manifest in so many surprising and.</p>
+              <h3>Diseño de Interiores</h3>
+              <p>María transformó un pequeño departamento en un espacio moderno y acogedor.</p>
             </div>
           </div>
           <div class="card">
-            <img src="images/portfolio-3.jpg" alt="" />
+            <img src="images/portfolio-3.jpg" alt="Proyecto 3" />
             <div class="info">
-              <h3>Project Here</h3>
-              <p>My creative ability is very difficult to measure because it can manifest in so many surprising and.</p>
+              <h3>Clases Particulares</h3>
+              <p>Pedro ayudó a varios estudiantes a mejorar sus notas en matemáticas desde casa.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- End Portfolio -->
-    <!-- Start About -->
-    <div class="about">
+
+    <!-- About -->
+    <div class="about" id="about">
       <div class="container">
-        <h2 class="special-heading">About</h2>
-        <p>Less is more work</p>
+        <h2 class="special-heading">Sobre Nosotros</h2>
+        <p>Uniendo talento con necesidad</p>
         <div class="about-content">
           <div class="image">
-            <img src="images/about.jpg" alt="" />
+            <img src="images/about.jpg" alt="Sobre Cachuelitos" />
           </div>
           <div class="text">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nemo neque voluptate tempora velit cum non,
-              fuga vitae architecto delectus sed maxime rerum impedit aliquam obcaecati, aut excepturi iusto laudantium!
-            </p>
+            <p><strong>Cachuelitos</strong> es una plataforma peruana que conecta a personas que buscan servicios profesionales con trabajadores independientes en múltiples especialidades.</p>
             <hr />
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, sapiente. Velit iure exercitationem
-              dolores nesciunt dolore. Eum officiis dolorum hic voluptate quaerat minima, similique inventore esse,
-              alias, sed quo officia?
-            </p>
+            <p>Nuestro objetivo es brindar una herramienta útil y accesible tanto para clientes como para trabajadores que desean promocionar sus habilidades y conseguir nuevas oportunidades.</p>
           </div>
         </div>
       </div>
     </div>
-    <!-- End About -->
-    <!-- Start Contact -->
-    <div class="contact">
+
+    <!-- Contact -->
+    <div class="contact" id="contact">
       <div class="container">
-        <h2 class="special-heading">Contact</h2>
-        <p>We are born to create</p>
         <div class="info">
-          <p class="label">Feel free to drop us a line at:</p>
-          <a href="mailto:leonagency@mail.com?subject=Contact" class="link">leonagency@mail.com</a>
+          <p class="label">Siéntete libre de escribirnos a:</p>
+          <a href="mailto:info@cachuelitos.com?subject=Contacto desde la Web" class="link">info@cachuelitos.com</a>
           <div class="social">
-            Find Us On Social Networks
-            <i class="fab fa-youtube"></i>
+            Síguenos en redes:
             <i class="fab fa-facebook-f"></i>
             <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
           </div>
         </div>
       </div>
     </div>
-    <!-- End Contact -->
-    <!-- Start Footer -->
-    <div class="footer">&copy; 2021 <span>Leon</span> All Right Reserved</div>
-    <!-- End Footer -->
+
+    <!-- Footer -->
+    <div class="footer">© 2025 <span>Cachuelitos</span> Todos los derechos reservados</div>
   </body>
 </html>
