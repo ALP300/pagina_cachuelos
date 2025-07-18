@@ -13,7 +13,8 @@
     <style>
       .header .logo {
         content: url('images/iconoC.jpg');
-        width: 10%;
+        width: 90px;
+        height: auto;
       }
       .intro-text h1 {
         color: #ff6200;
@@ -28,6 +29,142 @@
       .about .about-content .image::after {
         border-left-color: #ff6200;
         border-bottom-color: #ff6200;
+      }
+      .landing {
+        position: relative;
+        background-image: url('images/fondo.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .landing::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+      .intro-text {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        padding: 0 20px;
+      }
+      
+      /* Estilos para quitar el subrayado del navbar */
+      .header .links ul li a {
+        text-decoration: none;
+      }
+      
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        .header .container {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px;
+        }
+        
+        .header .links {
+          position: relative;
+        }
+        
+        .header .links ul {
+          display: none;
+          position: absolute;
+          right: 0;
+          top: 100%;
+          background-color: #fff;
+          min-width: 200px;
+          box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+          z-index: 1000;
+          padding: 10px 0;
+          border-radius: 4px;
+        }
+        
+        .header .links ul li {
+          display: block;
+          margin: 0;
+          padding: 10px 20px;
+        }
+        
+        .header .links ul li a {
+          color: #333;
+        }
+        
+        .header .links:hover ul {
+          display: block;
+        }
+        
+        .header .icon {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 30px;
+          height: 20px;
+          cursor: pointer;
+        }
+        
+        .header .icon span {
+          display: block;
+          width: 100%;
+          height: 3px;
+          background-color: #333;
+          transition: all 0.3s ease;
+        }
+        
+        .features .container {
+          flex-direction: column;
+          padding: 20px;
+        }
+        
+        .feat {
+          margin-bottom: 30px;
+          text-align: center;
+        }
+        
+        .services-content, .portfolio-content {
+          grid-template-columns: 1fr;
+        }
+        
+        .about-content {
+          flex-direction: column;
+        }
+        
+        .about-content .image {
+          margin: 0 auto 30px;
+        }
+        
+        .intro-text h1 {
+          font-size: 2rem;
+        }
+        
+        .intro-text p {
+          font-size: 1rem;
+        }
+      }
+      
+      @media (min-width: 769px) {
+        .header .icon {
+          display: none;
+        }
+        
+        .header .links ul {
+          display: flex !important;
+        }
+        
+        .header .links ul li a {
+          color: inherit;
+        }
       }
     </style>
   </head>
@@ -52,6 +189,7 @@
       </div>
     </div>
 
+    <!-- Resto del código permanece igual -->
     <!-- Landing -->
     <div class="landing">
       <div class="intro-text">
@@ -136,13 +274,9 @@
               <p>Creación de aplicaciones y sitios web a medida para negocios digitales.</p>
             </div>
           </div>
-
-          <!-- Imagen decorativa -->
-          </div>
         </div>
       </div>
     </div>
-
 
     <!-- Portfolio -->
     <div class="portfolio" id="portfolio">
@@ -182,7 +316,7 @@
         <p>Uniendo talento con necesidad</p>
         <div class="about-content">
           <div class="image">
-            <img src="images/about.jpg" alt="Sobre Cachuelitos" />
+            <img class="logo" src="images/fondo2.jpg" alt="Cachuelitos Logo" />
           </div>
           <div class="text">
             <p><strong>Cachuelitos</strong> es una plataforma peruana que conecta a personas que buscan servicios profesionales con trabajadores independientes en múltiples especialidades.</p>
@@ -199,11 +333,7 @@
         <div class="info">
           <p class="label">Siéntete libre de escribirnos a:</p>
           <a href="mailto:info@cachuelitos.com?subject=Contacto desde la Web" class="link">info@cachuelitos.com</a>
-          <div class="social">
-            Síguenos en redes:
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
+         
           </div>
         </div>
       </div>
@@ -211,5 +341,31 @@
 
     <!-- Footer -->
     <div class="footer">© 2025 <span>Cachuelitos</span> Todos los derechos reservados</div>
+
+    <script>
+      // JavaScript para el menú hamburguesa
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuIcon = document.querySelector('.header .icon');
+        const menuLinks = document.querySelector('.header .links ul');
+        
+        menuIcon.addEventListener('click', function() {
+          if (menuLinks.style.display === 'block') {
+            menuLinks.style.display = 'none';
+          } else {
+            menuLinks.style.display = 'block';
+          }
+        });
+        
+        // Cerrar menú al hacer clic en un enlace (para móviles)
+        const navLinks = document.querySelectorAll('.header .links ul li a');
+        navLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+              menuLinks.style.display = 'none';
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
